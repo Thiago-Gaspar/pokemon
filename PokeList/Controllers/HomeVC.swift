@@ -28,6 +28,19 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        PokemonsAPI.getAllPokemons { response in
+            
+            if response.success {
+                
+                
+                
+            } else {
+                
+                GenericAlert.genericAlert(self, title: "RUIM", message: "", actions: [])
+            }
+            
+        }
+        
         
     }
 

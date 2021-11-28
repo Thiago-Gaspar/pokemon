@@ -19,6 +19,15 @@
 		5567EF63275316A8002E9513 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF62275316A8002E9513 /* StartView.swift */; };
 		5567EF6527531CC3002E9513 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF6427531CC3002E9513 /* HomeView.swift */; };
 		5567EF6727531CFF002E9513 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF6627531CFF002E9513 /* HomeVC.swift */; };
+		5599CCDA2753CEB9003B333B /* FALSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCD92753CEB9003B333B /* FALSpinner.swift */; };
+		5599CCDC2753CEC8003B333B /* GenericAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCDB2753CEC8003B333B /* GenericAlert.swift */; };
+		5599CCDE2753CF19003B333B /* Strings+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCDD2753CF19003B333B /* Strings+Extension.swift */; };
+		5599CCE02753CF3E003B333B /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCDF2753CF3E003B333B /* UIFont+Extension.swift */; };
+		5599CCE22753CF59003B333B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCE12753CF59003B333B /* UIColor+Extension.swift */; };
+		5599CCE82753D01C003B333B /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCE72753D01C003B333B /* LoggedUser.swift */; };
+		5599CCEA2753D081003B333B /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCE92753D081003B333B /* ServerResponse.swift */; };
+		5599CCEC2753D302003B333B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCEB2753D302003B333B /* API.swift */; };
+		5599CCEE2753D45E003B333B /* PokemonsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599CCED2753D45E003B333B /* PokemonsAPI.swift */; };
 		F3FD4C7C90E6F4ED4F17E122 /* Pods_PokeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE74686A0D7C2A6AAF189192 /* Pods_PokeList.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +46,15 @@
 		5567EF62275316A8002E9513 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		5567EF6427531CC3002E9513 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5567EF6627531CFF002E9513 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		5599CCD92753CEB9003B333B /* FALSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FALSpinner.swift; sourceTree = "<group>"; };
+		5599CCDB2753CEC8003B333B /* GenericAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAlert.swift; sourceTree = "<group>"; };
+		5599CCDD2753CF19003B333B /* Strings+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Extension.swift"; sourceTree = "<group>"; };
+		5599CCDF2753CF3E003B333B /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		5599CCE12753CF59003B333B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5599CCE72753D01C003B333B /* LoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
+		5599CCE92753D081003B333B /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		5599CCEB2753D302003B333B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5599CCED2753D45E003B333B /* PokemonsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsAPI.swift; sourceTree = "<group>"; };
 		AE74686A0D7C2A6AAF189192 /* Pods_PokeList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CD39A96258F1A3B0CC82F2 /* Pods-PokeList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeList.debug.xcconfig"; path = "Target Support Files/Pods-PokeList/Pods-PokeList.debug.xcconfig"; sourceTree = "<group>"; };
 		F50A9DFB457CEA0AE38359C4 /* Pods-PokeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeList.release.xcconfig"; path = "Target Support Files/Pods-PokeList/Pods-PokeList.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +101,7 @@
 		5512E27D27526EE100766743 /* PokeList */ = {
 			isa = PBXGroup;
 			children = (
+				5599CCE32753CFB6003B333B /* Models+API */,
 				5512E27E27526EE100766743 /* AppDelegate.swift */,
 				5512E28027526EE100766743 /* SceneDelegate.swift */,
 				5512E28C27526EE200766743 /* LaunchScreen.storyboard */,
@@ -90,6 +109,7 @@
 				5512E28A27526EE200766743 /* Assets.xcassets */,
 				5512E28F27526EE200766743 /* Info.plist */,
 				5512E28727526EE100766743 /* PokeList.xcdatamodeld */,
+				5599CCD82753CE87003B333B /* Components */,
 				5512E2952752722F00766743 /* Extensions */,
 				5567EF602753164F002E9513 /* Controllers */,
 				5567EF6127531653002E9513 /* Views */,
@@ -101,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				5512E2982752749000766743 /* UIImage+Gif.swift */,
+				5599CCDD2753CF19003B333B /* Strings+Extension.swift */,
+				5599CCDF2753CF3E003B333B /* UIFont+Extension.swift */,
+				5599CCE12753CF59003B333B /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,6 +145,50 @@
 				5567EF6427531CC3002E9513 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5599CCD82753CE87003B333B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5599CCD92753CEB9003B333B /* FALSpinner.swift */,
+				5599CCDB2753CEC8003B333B /* GenericAlert.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5599CCE32753CFB6003B333B /* Models+API */ = {
+			isa = PBXGroup;
+			children = (
+				5599CCE52753CFD2003B333B /* API */,
+				5599CCE42753CFC8003B333B /* Models - Class */,
+				5599CCE62753CFF1003B333B /* DAO */,
+			);
+			path = "Models+API";
+			sourceTree = "<group>";
+		};
+		5599CCE42753CFC8003B333B /* Models - Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Models - Class";
+			sourceTree = "<group>";
+		};
+		5599CCE52753CFD2003B333B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5599CCE72753D01C003B333B /* LoggedUser.swift */,
+				5599CCE92753D081003B333B /* ServerResponse.swift */,
+				5599CCEB2753D302003B333B /* API.swift */,
+				5599CCED2753D45E003B333B /* PokemonsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5599CCE62753CFF1003B333B /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DAO;
 			sourceTree = "<group>";
 		};
 		E1211784E74D5EEE55C373A9 /* Pods */ = {
@@ -249,13 +316,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5599CCDC2753CEC8003B333B /* GenericAlert.swift in Sources */,
 				5512E28927526EE100766743 /* PokeList.xcdatamodeld in Sources */,
 				5567EF6727531CFF002E9513 /* HomeVC.swift in Sources */,
 				5567EF6527531CC3002E9513 /* HomeView.swift in Sources */,
+				5599CCEA2753D081003B333B /* ServerResponse.swift in Sources */,
+				5599CCDA2753CEB9003B333B /* FALSpinner.swift in Sources */,
 				5512E28327526EE100766743 /* StartVC.swift in Sources */,
+				5599CCE02753CF3E003B333B /* UIFont+Extension.swift in Sources */,
+				5599CCEE2753D45E003B333B /* PokemonsAPI.swift in Sources */,
 				5512E27F27526EE100766743 /* AppDelegate.swift in Sources */,
+				5599CCE82753D01C003B333B /* LoggedUser.swift in Sources */,
+				5599CCDE2753CF19003B333B /* Strings+Extension.swift in Sources */,
 				5567EF63275316A8002E9513 /* StartView.swift in Sources */,
+				5599CCE22753CF59003B333B /* UIColor+Extension.swift in Sources */,
 				5512E2992752749000766743 /* UIImage+Gif.swift in Sources */,
+				5599CCEC2753D302003B333B /* API.swift in Sources */,
 				5512E28127526EE100766743 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

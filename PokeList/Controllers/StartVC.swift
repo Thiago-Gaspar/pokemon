@@ -28,7 +28,7 @@ class StartVC: UIViewController {
         super.viewWillAppear(animated)
         
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             
             let vc = UINavigationController(rootViewController: HomeVC())
             
