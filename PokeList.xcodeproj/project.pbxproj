@@ -17,6 +17,8 @@
 		5512E2992752749000766743 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512E2982752749000766743 /* UIImage+Gif.swift */; };
 		5512E29B275278B400766743 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5512E29A275278B400766743 /* splash.gif */; };
 		5567EF63275316A8002E9513 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF62275316A8002E9513 /* StartView.swift */; };
+		5567EF6527531CC3002E9513 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF6427531CC3002E9513 /* HomeView.swift */; };
+		5567EF6727531CFF002E9513 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF6627531CFF002E9513 /* HomeVC.swift */; };
 		F3FD4C7C90E6F4ED4F17E122 /* Pods_PokeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE74686A0D7C2A6AAF189192 /* Pods_PokeList.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		5512E2982752749000766743 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		5512E29A275278B400766743 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
 		5567EF62275316A8002E9513 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		5567EF6427531CC3002E9513 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5567EF6627531CFF002E9513 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		AE74686A0D7C2A6AAF189192 /* Pods_PokeList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CD39A96258F1A3B0CC82F2 /* Pods-PokeList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeList.debug.xcconfig"; path = "Target Support Files/Pods-PokeList/Pods-PokeList.debug.xcconfig"; sourceTree = "<group>"; };
 		F50A9DFB457CEA0AE38359C4 /* Pods-PokeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeList.release.xcconfig"; path = "Target Support Files/Pods-PokeList/Pods-PokeList.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,8 +91,8 @@
 				5512E28F27526EE200766743 /* Info.plist */,
 				5512E28727526EE100766743 /* PokeList.xcdatamodeld */,
 				5512E2952752722F00766743 /* Extensions */,
-				5567EF6127531653002E9513 /* Views */,
 				5567EF602753164F002E9513 /* Controllers */,
+				5567EF6127531653002E9513 /* Views */,
 			);
 			path = PokeList;
 			sourceTree = "<group>";
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				5512E28227526EE100766743 /* StartVC.swift */,
+				5567EF6627531CFF002E9513 /* HomeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			children = (
 				5512E28427526EE100766743 /* Main.storyboard */,
 				5567EF62275316A8002E9513 /* StartView.swift */,
+				5567EF6427531CC3002E9513 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5512E28927526EE100766743 /* PokeList.xcdatamodeld in Sources */,
+				5567EF6727531CFF002E9513 /* HomeVC.swift in Sources */,
+				5567EF6527531CC3002E9513 /* HomeView.swift in Sources */,
 				5512E28327526EE100766743 /* StartVC.swift in Sources */,
 				5512E27F27526EE100766743 /* AppDelegate.swift in Sources */,
 				5567EF63275316A8002E9513 /* StartView.swift in Sources */,

@@ -16,21 +16,34 @@ class StartVC: UIViewController {
      *******************************************************************************/
     
     var startView : StartView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         startView = StartView(view: view, parent: self)
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            
+            let vc = UINavigationController(rootViewController: HomeVC())
+            
+            vc.modalTransitionStyle = .flipHorizontal
+            vc.modalPresentationStyle = .fullScreen
+            
+            self.present(vc, animated: true, completion: nil)
+            
+        }
+        
     }
-
-
+    
 }
+
+
+
 
 
