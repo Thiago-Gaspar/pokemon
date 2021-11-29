@@ -9,7 +9,7 @@ import UIKit
 
 enum AssetsColor : String {
 
-    case algo
+    case blue
     
 }
 

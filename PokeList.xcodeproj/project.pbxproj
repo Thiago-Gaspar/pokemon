@@ -16,6 +16,18 @@
 		5512E28E27526EE200766743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5512E28C27526EE200766743 /* LaunchScreen.storyboard */; };
 		5512E2992752749000766743 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512E2982752749000766743 /* UIImage+Gif.swift */; };
 		5512E29B275278B400766743 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5512E29A275278B400766743 /* splash.gif */; };
+		553C73FE2754437000281F10 /* PokemonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C73FD2754437000281F10 /* PokemonsCell.swift */; };
+		553C740027544D9500281F10 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C73FF27544D9500281F10 /* URL.swift */; };
+		553C740227544D9E00281F10 /* DAOUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C740127544D9E00281F10 /* DAOUrl.swift */; };
+		553C74042754530400281F10 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C74032754530400281F10 /* Pokemon.swift */; };
+		553C74062754530E00281F10 /* DAOPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C74052754530E00281F10 /* DAOPokemon.swift */; };
+		553C74082754549600281F10 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C74072754549500281F10 /* Sprites.swift */; };
+		553C740A275454B600281F10 /* DAOSprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C7409275454B600281F10 /* DAOSprites.swift */; };
+		553C740C275454DC00281F10 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C740B275454DC00281F10 /* Other.swift */; };
+		553C740E275454E500281F10 /* DAOOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C740D275454E500281F10 /* DAOOther.swift */; };
+		553C74102754550A00281F10 /* DreamWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C740F2754550A00281F10 /* DreamWorld.swift */; };
+		553C74122754551900281F10 /* DAODreamWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C74112754551900281F10 /* DAODreamWorld.swift */; };
+		553C7414275462CA00281F10 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C7413275462CA00281F10 /* CardView.swift */; };
 		5567EF63275316A8002E9513 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF62275316A8002E9513 /* StartView.swift */; };
 		5567EF6527531CC3002E9513 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF6427531CC3002E9513 /* HomeView.swift */; };
 		5567EF6727531CFF002E9513 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567EF6627531CFF002E9513 /* HomeVC.swift */; };
@@ -43,6 +55,18 @@
 		5512E28F27526EE200766743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5512E2982752749000766743 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		5512E29A275278B400766743 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
+		553C73FD2754437000281F10 /* PokemonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsCell.swift; sourceTree = "<group>"; };
+		553C73FF27544D9500281F10 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		553C740127544D9E00281F10 /* DAOUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOUrl.swift; sourceTree = "<group>"; };
+		553C74032754530400281F10 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		553C74052754530E00281F10 /* DAOPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOPokemon.swift; sourceTree = "<group>"; };
+		553C74072754549500281F10 /* Sprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
+		553C7409275454B600281F10 /* DAOSprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOSprites.swift; sourceTree = "<group>"; };
+		553C740B275454DC00281F10 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
+		553C740D275454E500281F10 /* DAOOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOOther.swift; sourceTree = "<group>"; };
+		553C740F2754550A00281F10 /* DreamWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamWorld.swift; sourceTree = "<group>"; };
+		553C74112754551900281F10 /* DAODreamWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAODreamWorld.swift; sourceTree = "<group>"; };
+		553C7413275462CA00281F10 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5567EF62275316A8002E9513 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		5567EF6427531CC3002E9513 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5567EF6627531CFF002E9513 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -109,6 +133,7 @@
 				5512E28A27526EE200766743 /* Assets.xcassets */,
 				5512E28F27526EE200766743 /* Info.plist */,
 				5512E28727526EE100766743 /* PokeList.xcdatamodeld */,
+				553C73FC2754435F00281F10 /* Cells */,
 				5599CCD82753CE87003B333B /* Components */,
 				5512E2952752722F00766743 /* Extensions */,
 				5567EF602753164F002E9513 /* Controllers */,
@@ -126,6 +151,14 @@
 				5599CCE12753CF59003B333B /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		553C73FC2754435F00281F10 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				553C73FD2754437000281F10 /* PokemonsCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		5567EF602753164F002E9513 /* Controllers */ = {
@@ -151,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				5599CCD92753CEB9003B333B /* FALSpinner.swift */,
+				553C7413275462CA00281F10 /* CardView.swift */,
 				5599CCDB2753CEC8003B333B /* GenericAlert.swift */,
 			);
 			path = Components;
@@ -169,6 +203,11 @@
 		5599CCE42753CFC8003B333B /* Models - Class */ = {
 			isa = PBXGroup;
 			children = (
+				553C73FF27544D9500281F10 /* URL.swift */,
+				553C74032754530400281F10 /* Pokemon.swift */,
+				553C74072754549500281F10 /* Sprites.swift */,
+				553C740B275454DC00281F10 /* Other.swift */,
+				553C740F2754550A00281F10 /* DreamWorld.swift */,
 			);
 			path = "Models - Class";
 			sourceTree = "<group>";
@@ -187,6 +226,11 @@
 		5599CCE62753CFF1003B333B /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				553C740127544D9E00281F10 /* DAOUrl.swift */,
+				553C7409275454B600281F10 /* DAOSprites.swift */,
+				553C74052754530E00281F10 /* DAOPokemon.swift */,
+				553C740D275454E500281F10 /* DAOOther.swift */,
+				553C74112754551900281F10 /* DAODreamWorld.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -322,17 +366,29 @@
 				5567EF6527531CC3002E9513 /* HomeView.swift in Sources */,
 				5599CCEA2753D081003B333B /* ServerResponse.swift in Sources */,
 				5599CCDA2753CEB9003B333B /* FALSpinner.swift in Sources */,
+				553C740027544D9500281F10 /* URL.swift in Sources */,
+				553C74122754551900281F10 /* DAODreamWorld.swift in Sources */,
 				5512E28327526EE100766743 /* StartVC.swift in Sources */,
+				553C74062754530E00281F10 /* DAOPokemon.swift in Sources */,
 				5599CCE02753CF3E003B333B /* UIFont+Extension.swift in Sources */,
 				5599CCEE2753D45E003B333B /* PokemonsAPI.swift in Sources */,
+				553C7414275462CA00281F10 /* CardView.swift in Sources */,
+				553C740E275454E500281F10 /* DAOOther.swift in Sources */,
+				553C740227544D9E00281F10 /* DAOUrl.swift in Sources */,
 				5512E27F27526EE100766743 /* AppDelegate.swift in Sources */,
 				5599CCE82753D01C003B333B /* LoggedUser.swift in Sources */,
 				5599CCDE2753CF19003B333B /* Strings+Extension.swift in Sources */,
+				553C74102754550A00281F10 /* DreamWorld.swift in Sources */,
 				5567EF63275316A8002E9513 /* StartView.swift in Sources */,
 				5599CCE22753CF59003B333B /* UIColor+Extension.swift in Sources */,
+				553C740A275454B600281F10 /* DAOSprites.swift in Sources */,
+				553C740C275454DC00281F10 /* Other.swift in Sources */,
+				553C74042754530400281F10 /* Pokemon.swift in Sources */,
 				5512E2992752749000766743 /* UIImage+Gif.swift in Sources */,
 				5599CCEC2753D302003B333B /* API.swift in Sources */,
 				5512E28127526EE100766743 /* SceneDelegate.swift in Sources */,
+				553C73FE2754437000281F10 /* PokemonsCell.swift in Sources */,
+				553C74082754549600281F10 /* Sprites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

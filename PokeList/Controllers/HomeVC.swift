@@ -7,6 +7,7 @@
 
 
 import UIKit
+import SDWebImage
 
 class HomeVC: UIViewController {
     
@@ -17,11 +18,16 @@ class HomeVC: UIViewController {
      *******************************************************************************/
     
     var homeView : HomeView!
+    
+    var pokemons : [Pokemon] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         homeView = HomeView(view: view, parent: self)
+        
+        homeView.tableView.delegate = self
+        homeView.tableView.dataSource = self
 
     }
     
@@ -32,7 +38,9 @@ class HomeVC: UIViewController {
             
             if response.success {
                 
+                if response.res
                 
+                self.pokemons = response.pokemons
                 
             } else {
                 
@@ -44,7 +52,28 @@ class HomeVC: UIViewController {
         
     }
 
-
 }
 
+extension HomeVC : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pokemons.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = PokemonsCell(view: view)
+        
+        let url = URL(string: self.pokemons[indexPath.row].sprites.other.dreamWorld.image)
+            
+        if url != nil {
+            
+            cell.pokeImageView.sd_setImage(with: url, completed: nil)
+            
+        }
+        
+        return cell
+        
+    }
 
+}

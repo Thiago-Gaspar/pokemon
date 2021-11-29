@@ -7,6 +7,9 @@
 
 import UIKit
 
+public struct PreferenceKeys {
+    static let pokemons : String = "pokemonsKey"
+}
 class LoggedUser {
     
     static let sharedInstance = LoggedUser()

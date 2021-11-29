@@ -22,18 +22,16 @@ class PokemonsAPI {
     
     static func getAllPokemons(callback: @escaping (ServerResponse) -> Void) {
         
-        let newUrl = API.host
+        let newUrl = API.host + "?limit=2&offset=0"
         
         print("request - getAllPokemons")
         print(newUrl)
-        
-        let headers = HTTPHeaders()
-        
+                
         API.sharedInstance.sessionManager.request(newUrl,
                                                   method: HTTPMethod.get,
                                                   parameters: nil,
                                                   encoding: URLEncoding.default,
-                                                  headers: headers
+                                                  headers: nil
         ).responseJSON(completionHandler: { response in
             
             let resposta = ServerResponse()
@@ -46,16 +44,74 @@ class PokemonsAPI {
             case let .success(value):
                 
                 resposta.statusCode = response.response?.statusCode ?? 0
-                
-                let JSON = value as AnyObject
-                
+                                
                 if response.response?.statusCode == 200 {
                     
-                    print(response.result)
-                    resposta.success = true
-                    callback(resposta)
+                    let JSON = value as AnyObject
                     
-                    return
+                    if let results = JSON["results"] as? [[String : Any]] {
+                        
+                        resposta.url = DAOUrl.transformJSONInArrayUrl(results as AnyObject)
+                        
+                        let urls = resposta.url
+                        
+                        if urls.count > 0 {
+                            
+                            for url in urls {
+                                
+                                let newURL = url.url
+                                
+                                API.sharedInstance.sessionManager.request(newURL,
+                                                                          method: HTTPMethod.get,
+                                                                          parameters: nil,
+                                                                          encoding: URLEncoding.default,
+                                                                          headers: nil
+                                ).responseJSON(completionHandler: { response in
+                                                                        
+                                    print(response.result)
+                                    
+                                    switch response.result {
+                                        
+                                    case let .success(value):
+                                        
+                                        resposta.statusCode = response.response?.statusCode ?? 0
+                                                        
+                                        if response.response?.statusCode == 200 {
+                                            
+                                            let JSON = value as AnyObject
+                                            
+                                            resposta.pokemon = DAOPokemon.transformJSONInPokemon(JSON as AnyObject)
+                                            
+                                            resposta.pokemons.append(resposta.pokemon)
+                                            
+                                            resposta.success = true
+                                            callback(resposta)
+                                            
+                                        }
+                    
+                                    case let .failure(error):
+                                        
+                                        print(error)
+                                        
+                                    }
+                                    
+                                    resposta.success = false
+                                    resposta.erroMessage = "Deu ruim"
+                                    callback(resposta)
+                                    
+                                })
+                                
+                            }
+                            
+                        }
+                        
+                        resposta.success = true
+                        callback(resposta)
+                        
+                        return
+                        
+                    }
+                   
                 }
                 
             case let .failure(error):
@@ -64,7 +120,7 @@ class PokemonsAPI {
             }
             
             resposta.success = false
-            resposta.erroMessage = ""
+            resposta.erroMessage = "Deu ruim"
             callback(resposta)
             
             return
