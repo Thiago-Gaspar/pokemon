@@ -51,6 +51,7 @@ class PokemonsCell: UITableViewCell {
         pokeImageView.contentMode = .scaleAspectFit
         pokeImageView.layer.cornerRadius = 12
         pokeImageView.clipsToBounds = true
+        pokeImageView.frame.origin.x = cardView.frame.origin.x
         
         contentView.addSubview(pokeImageView)
         

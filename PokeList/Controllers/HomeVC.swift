@@ -19,7 +19,7 @@ class HomeVC: UIViewController {
     
     var homeView : HomeView!
     
-    var pokemons : [Pokemon] = []
+    var pokemons : [Pokemons] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,17 +38,40 @@ class HomeVC: UIViewController {
             
             if response.success {
                 
-                if response.res
-                
-                self.pokemons = response.pokemons
+                for url in response.url {
+                    
+                    PokemonsAPI.getPokeInfos(url: url.url) { response in
+                        
+                        if response.success {
+                                                        
+                            self.pokemons.insert(response.pokemon, at: self.pokemons.count)
+                            
+                            self.homeView.tableView.reloadData()
+                                                        
+                        } else {
+                            
+                            GenericAlert.genericAlert(self, title: response.erroMessage, message: "", actions: [])
+                            
+                        }
+                        
+                    }
+                    
+                    let number = Int(url.url.components(separatedBy: CharacterSet.decimalDigits).joined())
+                    
+                    if number == response.url.count - 1 {
+                        
+                        break
+                        
+                    }
+                    
+                }
                 
             } else {
                 
-                GenericAlert.genericAlert(self, title: "RUIM", message: "", actions: [])
+                GenericAlert.genericAlert(self, title: response.erroMessage, message: "", actions: [])
             }
             
         }
-        
         
     }
 
@@ -64,7 +87,9 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         let cell = PokemonsCell(view: view)
         
-        let url = URL(string: self.pokemons[indexPath.row].sprites.other.dreamWorld.image)
+        let url = URL(string: self.pokemons[indexPath.row].sprites.other.image.defaultImage)
+        
+        print(url)
             
         if url != nil {
             
@@ -72,7 +97,15 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             
         }
         
+        cell.nameLabel.text = self.pokemons[indexPath.row].name
+        
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 120
         
     }
 

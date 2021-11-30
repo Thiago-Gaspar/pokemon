@@ -13,8 +13,8 @@ class ServerResponse {
     var erroMessage : String = ""
     var statusCode : Int = 0
     var url : [Url] = []
-    var pokemon : Pokemon!
-    var pokemons : [Pokemon] = []
+    var pokemon : Pokemons!
+    var pokemons : [Pokemons] = []
     
     init () {
         

@@ -10,5 +10,4 @@ import UIKit
 class Sprites {
     
     var other : Other!
-    
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Pokemon {
+class Pokemons {
     
     var name : String = ""
     var sprites : Sprites!

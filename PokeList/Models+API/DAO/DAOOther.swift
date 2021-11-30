@@ -40,6 +40,11 @@ class DAOOther {
         if let info = JSON["dream_world"] as? [String : Any] {
             item.dreamWorld = DAODreamWorld.transformJSONInDreamWorld(info as AnyObject)
         }
+        
+        
+        if let info = JSON["home"] as? [String : Any] {
+            item.image = DAOImage.transformJSONInImage(info as AnyObject)
+        }
        
         return item
         

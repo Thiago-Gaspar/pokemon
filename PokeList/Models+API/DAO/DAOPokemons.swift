@@ -10,15 +10,15 @@ import Foundation
 import CoreData
 import UIKit
 
-class DAOPokemon {
+class DAOPokemons {
     
     fileprivate init() {
         
     }
     
-    static func transformJSONInArrayPokemon(_ JSON : AnyObject) -> [Pokemon] {
+    static func transformJSONInArrayPokemons(_ JSON : AnyObject) -> [Pokemons] {
         
-        var array : [Pokemon] = []
+        var array : [Pokemons] = []
         
         guard let data = JSON as? NSArray else {
             return array
@@ -26,7 +26,7 @@ class DAOPokemon {
         
         for item in data {
             
-            array.append(transformJSONInPokemon(item as AnyObject))
+            array.append(transformJSONInPokemons(item as AnyObject))
             
         }
         
@@ -34,9 +34,9 @@ class DAOPokemon {
         
     }
     
-    static func transformJSONInPokemon(_ JSON : AnyObject) -> Pokemon {
+    static func transformJSONInPokemons(_ JSON : AnyObject) -> Pokemons {
         
-        let item = Pokemon()
+        let item = Pokemons()
         
         if let info = JSON["name"] as? String {
             item.name = info
