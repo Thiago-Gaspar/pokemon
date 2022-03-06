@@ -38,12 +38,20 @@ class DAOPokemons {
         
         let item = Pokemons()
         
+        if let info = JSON["id"] as? Int {
+            item.id = info
+        }
+        
         if let info = JSON["name"] as? String {
             item.name = info
         }
         
         if let info = JSON["sprites"] as? [String : Any] {
             item.sprites = DAOSprites.transformJSONInSprites(info as AnyObject)
+        }
+        
+        if let info = JSON["order"] as? Int {
+            item.order = info
         }
        
         return item

@@ -9,7 +9,9 @@ import UIKit
 
 class Pokemons {
     
+    var id : Int = -1
     var name : String = ""
+    var order : Int = -1
     var sprites : Sprites!
     
 }

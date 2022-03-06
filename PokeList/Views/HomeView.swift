@@ -47,7 +47,7 @@ class HomeView: UIView {
         
         //-------------------- Table View --------------------------------
 
-        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: width, height: height - pokemonsLabel.frame.height - 20))
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: width, height: height - pokemonsLabel.frame.height - 20 - 50))
         tableView.frame.origin.y = pokemonsLabel.frame.origin.y + pokemonsLabel.frame.height + 20
         tableView.isScrollEnabled = true
         tableView.separatorStyle = .none

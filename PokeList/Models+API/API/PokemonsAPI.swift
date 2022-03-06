@@ -22,7 +22,7 @@ class PokemonsAPI {
     
     static func getAllPokemons(callback: @escaping (ServerResponse) -> Void) {
         
-        let newUrl = API.host + "?limit=1&offset=0"
+        let newUrl = API.host + "?limit=2&offset=0"
         
         print("request - getAllPokemons")
         print(newUrl)
@@ -113,7 +113,7 @@ class PokemonsAPI {
                     let JSON = value as AnyObject
 
                     resposta.pokemon = DAOPokemons.transformJSONInPokemons(JSON as AnyObject)
-
+                    
                     resposta.success = true
                     callback(resposta)
                     

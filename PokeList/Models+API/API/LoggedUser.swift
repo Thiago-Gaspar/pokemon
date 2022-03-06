@@ -8,15 +8,15 @@
 import UIKit
 
 public struct PreferenceKeys {
-    static let pokemons : String = "pokemonsKey"
+    static let pokemonsKey : String = "pokemonsKey"
 }
+
 class LoggedUser {
     
     static let sharedInstance = LoggedUser()
-    
-    
-    
-    fileprivate init () {        
+        
+    fileprivate init () {
+        
     }
     
 }
