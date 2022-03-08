@@ -13,5 +13,5 @@ class Pokemons {
     var name : String = ""
     var order : Int = -1
     var sprites : Sprites!
-    
+    var types : [Types] = []
 }

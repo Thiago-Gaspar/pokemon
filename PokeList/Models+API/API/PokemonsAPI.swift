@@ -20,9 +20,9 @@ class PokemonsAPI {
      **
      ***********************************************************************************/
     
-    static func getAllPokemons(callback: @escaping (ServerResponse) -> Void) {
+    static func getAllPokemons(offset : Int, callback: @escaping (ServerResponse) -> Void) {
         
-        let newUrl = API.host + "?limit=2&offset=0"
+        let newUrl = API.host + "?limit=10&offset=\(offset)"
         
         print("request - getAllPokemons")
         print(newUrl)

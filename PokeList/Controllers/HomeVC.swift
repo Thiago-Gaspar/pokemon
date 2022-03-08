@@ -20,8 +20,8 @@ class HomeVC: UIViewController {
     
     var pokemons : [Pokemons] = []
     
-    var pokemonIndex : Int = -1
-    
+    var offset = 0
+        
     var cellTapped : Bool = false
     
     var rowIndex : IndexPath = IndexPath.init(row: -1, section: -1)
@@ -40,6 +40,8 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.offset = 0
+        
         self.loadPokemons()
         
     }
@@ -48,7 +50,7 @@ class HomeVC: UIViewController {
         
         self.startLoading()
         
-        PokemonsAPI.getAllPokemons { urlResponse in
+        PokemonsAPI.getAllPokemons(offset: self.offset) { urlResponse in
             
             if urlResponse.success {
                 
@@ -57,22 +59,20 @@ class HomeVC: UIViewController {
                     let number = Int(url.url.westernArabicNumeralsOnly.dropFirst())
                     
                     PokemonsAPI.getPokeInfos(url: url.url) { pokeResponse in
-                        
-                        self.stopLoading()
-                        
+                                                
                         if pokeResponse.success {
                             
                             self.pokemons.insert(pokeResponse.pokemon, at: self.pokemons.count)
                             
                             self.pokemons = self.pokemons.sorted(by: {$0.id < $1.id})
                             
-                            if number != nil {
+                            if self.pokemons.count == number {
                                 
-                                self.pokemonIndex = number!
+                                self.homeView.tableView.reloadData()
                                 
+                                self.stopLoading()
+                                                                                                
                             }
-                            
-                            self.homeView.tableView.reloadData()
                             
                         } else {
                             
@@ -123,6 +123,25 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         let cell = PokemonsCell(view: view)
         
+        switch self.pokemons[indexPath.row].types[0].type {
+            
+        case "grass":
+            cell.cardView.backgroundColor = .green
+        case "poison":
+            cell.cardView.backgroundColor = .purple
+        case "fire":
+            cell.cardView.backgroundColor = .orange
+        case "water":
+            cell.cardView.backgroundColor = .blue
+        case "normal":
+            cell.cardView.backgroundColor = .brown
+        case "bug":
+            cell.cardView.backgroundColor = .systemGreen
+        default:
+            break
+            
+        }
+                
         let url = URL(string: self.pokemons[indexPath.row].sprites.other.image.defaultImage)
         
         if url != nil {

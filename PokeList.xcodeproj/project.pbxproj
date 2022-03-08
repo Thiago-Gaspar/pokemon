@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5502A5CA27D701930021B652 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502A5C927D701930021B652 /* Types.swift */; };
+		5502A5CC27D702590021B652 /* DAOTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502A5CB27D702590021B652 /* DAOTypes.swift */; };
 		5512E27F27526EE100766743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512E27E27526EE100766743 /* AppDelegate.swift */; };
 		5512E28127526EE100766743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512E28027526EE100766743 /* SceneDelegate.swift */; };
 		5512E28327526EE100766743 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512E28227526EE100766743 /* StartVC.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5502A5C927D701930021B652 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		5502A5CB27D702590021B652 /* DAOTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOTypes.swift; sourceTree = "<group>"; };
 		5512E27B27526EE100766743 /* PokeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5512E27E27526EE100766743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5512E28027526EE100766743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 				553C73FF27544D9500281F10 /* URL.swift */,
 				553C74032754530400281F10 /* Pokemons.swift */,
 				553C74072754549500281F10 /* Sprites.swift */,
+				5502A5C927D701930021B652 /* Types.swift */,
 				553C740B275454DC00281F10 /* Other.swift */,
 				555A57D22755AA1B004330CE /* Image.swift */,
 				553C740F2754550A00281F10 /* DreamWorld.swift */,
@@ -234,6 +239,7 @@
 				553C740127544D9E00281F10 /* DAOUrl.swift */,
 				553C7409275454B600281F10 /* DAOSprites.swift */,
 				553C74052754530E00281F10 /* DAOPokemons.swift */,
+				5502A5CB27D702590021B652 /* DAOTypes.swift */,
 				555A57D42755AA28004330CE /* DAOImage.swift */,
 				553C740D275454E500281F10 /* DAOOther.swift */,
 				553C74112754551900281F10 /* DAODreamWorld.swift */,
@@ -371,6 +377,7 @@
 				5567EF6727531CFF002E9513 /* HomeVC.swift in Sources */,
 				5567EF6527531CC3002E9513 /* HomeView.swift in Sources */,
 				5599CCEA2753D081003B333B /* ServerResponse.swift in Sources */,
+				5502A5CC27D702590021B652 /* DAOTypes.swift in Sources */,
 				5599CCDA2753CEB9003B333B /* FALSpinner.swift in Sources */,
 				553C740027544D9500281F10 /* URL.swift in Sources */,
 				553C74122754551900281F10 /* DAODreamWorld.swift in Sources */,
@@ -393,6 +400,7 @@
 				553C740C275454DC00281F10 /* Other.swift in Sources */,
 				553C74042754530400281F10 /* Pokemons.swift in Sources */,
 				5512E2992752749000766743 /* UIImage+Gif.swift in Sources */,
+				5502A5CA27D701930021B652 /* Types.swift in Sources */,
 				5599CCEC2753D302003B333B /* API.swift in Sources */,
 				5512E28127526EE100766743 /* SceneDelegate.swift in Sources */,
 				553C73FE2754437000281F10 /* PokemonsCell.swift in Sources */,
