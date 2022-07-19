@@ -57,7 +57,15 @@ class DAOPokemons {
         if let info = JSON["types"] as? [[String : Any]] {
             item.types = DAOTypes.transformJSONInArrayTypes(info as AnyObject)
         }
-       
+        
+        if let info = JSON["weight"] as? Int {
+            item.weight = info
+        }
+        
+        if let info = JSON["height"] as? Int {
+            item.height = info
+        }
+        
         return item
         
     }

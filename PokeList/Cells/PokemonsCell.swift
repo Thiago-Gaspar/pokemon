@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PokemonsCellDelegate {
+    func cellClicked(index : Int)
+}
+
 class PokemonsCell: UITableViewCell {
     
     /* **************************************************************************************************
@@ -22,6 +26,10 @@ class PokemonsCell: UITableViewCell {
     var nameLabel : UILabel!
     
     var idLabel : UILabel!
+    
+    var delegate : PokemonsCellDelegate!
+    
+    var index : Int = -1
         
     /* **************************************************************************************************
      **
@@ -68,6 +76,8 @@ class PokemonsCell: UITableViewCell {
         nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.frame.origin.x = pokeImageView.frame.origin.x + pokeImageView.frame.width + 15
         nameLabel.center.y = cardView.center.y
+        let tap = UITapGestureRecognizer(target: self, action: #selector(cardAction))
+        nameLabel.addGestureRecognizer(tap)
         
         contentView.addSubview(nameLabel)
         
@@ -111,6 +121,10 @@ class PokemonsCell: UITableViewCell {
         
 //        arrowImageView.image = UIImage(named: "dropdown")
         
+    }
+    
+    @objc func cardAction() {
+        self.delegate.cellClicked(index: index)
     }
 
     required init?(coder aDecoder: NSCoder) {

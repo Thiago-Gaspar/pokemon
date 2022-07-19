@@ -50,13 +50,17 @@ class HomeVC: UIViewController {
         
         self.startLoading()
         
-        PokemonsAPI.getAllPokemons(offset: self.offset) { urlResponse in
+        PokemonsAPI.getAllPokemons(offset: self.offset) { urlResponse in 
+            
+            self.stopLoading()
             
             if urlResponse.success {
                 
                 for url in urlResponse.url {
                     
                     let number = Int(url.url.westernArabicNumeralsOnly.dropFirst())
+                    
+                    self.startLoading()
                     
                     PokemonsAPI.getPokeInfos(url: url.url) { pokeResponse in
                                                 
@@ -123,8 +127,10 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         let cell = PokemonsCell(view: view)
         
+        cell.delegate = self
+        cell.index = indexPath.row
+        
         switch self.pokemons[indexPath.row].types[0].type {
-            
         case "grass":
             cell.cardView.backgroundColor = .green
         case "poison":
@@ -134,12 +140,17 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         case "water":
             cell.cardView.backgroundColor = .blue
         case "normal":
-            cell.cardView.backgroundColor = .brown
+            cell.cardView.backgroundColor = .white
         case "bug":
             cell.cardView.backgroundColor = .systemGreen
+        case "electric":
+            cell.cardView.backgroundColor = .yellow
+        case "fairy":
+            cell.cardView.backgroundColor = .systemPink
+        case "ground":
+            cell.cardView.backgroundColor = .brown
         default:
             break
-            
         }
                 
         let url = URL(string: self.pokemons[indexPath.row].sprites.other.image.defaultImage)
@@ -242,4 +253,11 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
     }
     
+}
+
+extension HomeVC : PokemonsCellDelegate {
+    func cellClicked(index: Int) {
+        let vc = PokemonVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

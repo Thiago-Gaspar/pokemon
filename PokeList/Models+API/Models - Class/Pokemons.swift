@@ -14,4 +14,6 @@ class Pokemons {
     var order : Int = -1
     var sprites : Sprites!
     var types : [Types] = []
+    var height : Int = -1
+    var weight : Int = -1
 }

@@ -18,6 +18,7 @@
 		5512E28E27526EE200766743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5512E28C27526EE200766743 /* LaunchScreen.storyboard */; };
 		5512E2992752749000766743 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512E2982752749000766743 /* UIImage+Gif.swift */; };
 		5512E29B275278B400766743 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5512E29A275278B400766743 /* splash.gif */; };
+		5521D1902881AD7F005ACF3C /* PokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521D18F2881AD7F005ACF3C /* PokemonVC.swift */; };
 		553C73FE2754437000281F10 /* PokemonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C73FD2754437000281F10 /* PokemonsCell.swift */; };
 		553C740027544D9500281F10 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C73FF27544D9500281F10 /* URL.swift */; };
 		553C740227544D9E00281F10 /* DAOUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C740127544D9E00281F10 /* DAOUrl.swift */; };
@@ -61,6 +62,7 @@
 		5512E28F27526EE200766743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5512E2982752749000766743 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		5512E29A275278B400766743 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
+		5521D18F2881AD7F005ACF3C /* PokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonVC.swift; sourceTree = "<group>"; };
 		553C73FD2754437000281F10 /* PokemonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsCell.swift; sourceTree = "<group>"; };
 		553C73FF27544D9500281F10 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		553C740127544D9E00281F10 /* DAOUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOUrl.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				5512E28227526EE100766743 /* StartVC.swift */,
 				5567EF6627531CFF002E9513 /* HomeVC.swift */,
+				5521D18F2881AD7F005ACF3C /* PokemonVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				5502A5CC27D702590021B652 /* DAOTypes.swift in Sources */,
 				5599CCDA2753CEB9003B333B /* FALSpinner.swift in Sources */,
 				553C740027544D9500281F10 /* URL.swift in Sources */,
+				5521D1902881AD7F005ACF3C /* PokemonVC.swift in Sources */,
 				553C74122754551900281F10 /* DAODreamWorld.swift in Sources */,
 				555A57D52755AA28004330CE /* DAOImage.swift in Sources */,
 				5512E28327526EE100766743 /* StartVC.swift in Sources */,
