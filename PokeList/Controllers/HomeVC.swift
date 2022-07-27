@@ -59,9 +59,7 @@ class HomeVC: UIViewController {
                 for url in urlResponse.url {
                     
                     let number = Int(url.url.westernArabicNumeralsOnly.dropFirst())
-                    
-                    self.startLoading()
-                    
+                                        
                     PokemonsAPI.getPokeInfos(url: url.url) { pokeResponse in
                                                 
                         if pokeResponse.success {
@@ -73,9 +71,7 @@ class HomeVC: UIViewController {
                             if self.pokemons.count == number {
                                 
                                 self.homeView.tableView.reloadData()
-                                
-                                self.stopLoading()
-                                                                                                
+                                                                                                                                
                             }
                             
                         } else {

@@ -35,12 +35,11 @@ class HomeView: UIView {
         
         //-------------------- Pokemons Label --------------------------------
 
-        pokemonImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width*0.7, height: 50))
+        pokemonImageView = UIImageView(frame: CGRect(x: 0, y: 80, width: width*0.7, height: 100))
         pokemonImageView.image = UIImage(named: "logo")
+        pokemonImageView.contentMode = .scaleAspectFit
         pokemonImageView.clipsToBounds = true
-        pokemonImageView.contentMode = .scaleAspectFill
         pokemonImageView.center.x = width/2
-        pokemonImageView.frame.origin.y = parent.navigationController!.navigationBar.frame.origin.y + parent.navigationController!.navigationBar.frame.height + 48 + 20
         
         view.addSubview(pokemonImageView)
         

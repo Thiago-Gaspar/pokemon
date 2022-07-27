@@ -30,7 +30,7 @@ class StartVC: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             
-            let vc = UINavigationController(rootViewController: HomeVC())
+            let vc = HomeVC()
             
             vc.modalTransitionStyle = .flipHorizontal
             vc.modalPresentationStyle = .fullScreen
